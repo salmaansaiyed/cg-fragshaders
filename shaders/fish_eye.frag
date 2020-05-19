@@ -22,8 +22,8 @@ void main() {
     float radius = pow(length(newtexcoord), 1.5);
     
     // calculate final texture coordinate = (radius * cos(𝜽),  radius * sin(𝜽))
-    texcoord.x = radius * cos(theta);
-    texcoord.y = radius * sin(theta);
+    newtexcoord.x = radius * cos(theta);
+    newtexcoord.y = radius * sin(theta);
     
-    FragColor = texture(image, texcoord);
+    FragColor = texture(image, newtexcoord);
 }
