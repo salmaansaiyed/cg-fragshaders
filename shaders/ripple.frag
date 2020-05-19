@@ -12,7 +12,7 @@ out vec4 FragColor;
 void main() {
     // scale and translate the texture coordinate such that it is in the range [-1.0, 1.0]
     // multiply by 2, then subtract 1
-    vec2 newtexcoord = texcoord * 2 - 1;
+    vec2 newtexcoord = texcoord * 2.0 - 1.0;
     
     // calculate radius = magnitude of texture coordinate
     float radius = length(newtexcoord);
