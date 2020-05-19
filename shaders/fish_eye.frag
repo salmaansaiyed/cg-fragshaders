@@ -11,9 +11,7 @@ out vec4 FragColor;
 void main() {
     // scale and translate the texture coordinate such that it is in the range [-1.0, 1.0]
     // multiply by 2, then subtract 1
-    vec2 newtexcoord;
-    newtexcoord.x = texcoord.x * 2 - 1;
-    newtexcoord.y = texcoord.y * 2 - 1;
+    vec2 newtexcoord = texcoord * 2.0 - 1.0;
     
     // calculate 𝜽 = arctan(texture_coordinate_y, texture_coordinate_x)
     float theta = atan(newtexcoord.y, newtexcoord.x);
