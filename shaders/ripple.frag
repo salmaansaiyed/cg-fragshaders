@@ -21,7 +21,7 @@ void main() {
     vec2 offset = newtexcoord * (sin(radius * 30.0 - time * 5.0) + 0.5) / 60.0;
     
     // calculate final texture coordinate = original_texture_coordinate + texture_coordinate_offset
-    texcoord = newtexcoord + offset;
+    newtexcoord = newtexcoord + offset;
     
-    FragColor = texture(image, texcoord);
+    FragColor = texture(image, newtexcoord);
 }
